@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 
 // Internal dependencies
 import config from './config/environmentVariables';
+import { HackerNewsModule } from './modules/hackerNews/hackerNews.module';
 
 @Module({
     imports: [
@@ -16,6 +17,7 @@ import config from './config/environmentVariables';
                 PORT: joi.number().required(),
             }),
         }),
+        HackerNewsModule,
     ],
     controllers: [],
     providers: [],
