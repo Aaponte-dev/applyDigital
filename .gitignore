@@ -38,3 +38,4 @@ lerna-debug.log*
 # SERVER
 .env
 src/main.ts
+src/modules/hackerNews/controller/hackerNewsController.controller.ts

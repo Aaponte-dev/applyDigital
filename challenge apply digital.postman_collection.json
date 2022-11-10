@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "af9ae1fd-2feb-48c0-b7b9-8b7162546e13",
+		"name": "challenge apply digital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24152264"
+	},
+	"item": [
+		{
+			"name": "Get all hits",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Bearer 7NEnxW2DmqTWmP9RHG779QrQBHeDXY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/HackerNewsController/hits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"HackerNewsController",
+						"hits"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "_tags",
+							"value": "comment",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Show HN: Supertweak – a visual devtools extension for Tailwind CSS",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "hot_gril",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get hit by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Bearer 7NEnxW2DmqTWmP9RHG779QrQBHeDXY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/HackerNewsController/hit/636c3a641e224dbd6b3feff8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"HackerNewsController",
+						"hit",
+						"636c3a641e224dbd6b3feff8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update hit by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Bearer 7NEnxW2DmqTWmP9RHG779QrQBHeDXY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"created_at\": \"2022-11-09T21:12:31.000Z\",\n    \"title\": \"Prueba\",\n    \"url\": \"test.com\",\n    \"author\": \"titzer 1\",\n    \"points\": 85,\n    \"story_text\": \"test\",\n    \"comment_text\": \"a\",\n    \"num_comments\": 1,\n    \"story_id\": 10,\n    \"story_title\": \"abcc\",\n    \"story_url\": \"https://dougallj.wordpress.com/2022/11/09/why-is-rosetta-2-fast/85\",\n    \"parent_id\": 335373381,\n    \"created_at_i\": 1668028352,\n    \"_tags\": [\n        1,\n        2,\n        3\n    ],\n    \"objectID\": \"33537915\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/HackerNewsController/hit/636c3a641e224dbd6b3feff8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"HackerNewsController",
+						"hit",
+						"636c3a641e224dbd6b3feff8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all hits",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Bearer 7NEnxW2DmqTWmP9RHG779QrQBHeDXY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/HackerNewsController/hits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"HackerNewsController",
+						"hits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete hit by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "Bearer 7NEnxW2DmqTWmP9RHG779QrQBHeDXY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/HackerNewsController/hit/636c3a641e224dbd6b3feff3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"HackerNewsController",
+						"hit",
+						"636c3a641e224dbd6b3feff3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
